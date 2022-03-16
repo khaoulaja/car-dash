@@ -1,4 +1,5 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
+const maintenanceSchema = require('./Maintenance');
 
 const carSchema = new Schema({
     cars: [
@@ -20,6 +21,20 @@ const carSchema = new Schema({
     model: {
         type: String,
     },
+    maintenance: [maintenanceSchema],
+
+},
+    {
+        toJSON: {
+            getters: true
+        }
+    }
+);
+
+carSchema.virtual('maintenanceCount').get(function () {
+    return this.maintenance.length;
 });
 
-module.exports = carSchema;
+const Car = model('Car', carSchema);
+
+module.exports = Car;
