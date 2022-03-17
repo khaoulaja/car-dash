@@ -20,7 +20,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        car: [carSchema],
+        cars: [carSchema],
     },
     {
         toJSON: {

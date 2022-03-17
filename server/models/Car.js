@@ -1,8 +1,7 @@
 const { Schema, model } = require('mongoose');
-const maintenanceSchema = require('./Maintenance');
 
 const carSchema = new Schema({
-    cars: [
+    car: [
         {
             type: String,
         },
@@ -21,7 +20,11 @@ const carSchema = new Schema({
     model: {
         type: String,
     },
-    maintenance: [maintenanceSchema],
+    maintenance: [
+        {
+            type: String
+        }
+    ],
 
 },
     {
