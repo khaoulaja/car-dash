@@ -1,5 +1,5 @@
 import React from "react";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 
@@ -8,7 +8,7 @@ function App() {
     <div>
     <Header/>
     <div className="min-h-screen"> dd</div>
-    {/* <Footer/> */}
+    <Footer/>
     </div>
   );
 }
