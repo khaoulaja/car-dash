@@ -40,3 +40,8 @@ body {
 .bg-offwhite{
   background-color: #FDFDFE;
 }
+.bg-hero{
+  background-image: url('./assets/images/bg.png');
+  background-position: right;
+  background-size: cover;
+}
