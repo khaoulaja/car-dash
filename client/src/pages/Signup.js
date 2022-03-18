@@ -8,7 +8,7 @@ const Signup = ()=>{
             <img src={gif}/>
         </div>
         <div className="overflow-hidden m-auto flex md:w-1/2 justify-center  py-10 items-center">
-            <form className="bg-white md:w-96 w-80 p-6 rounded-lg drop-shadow-xl m-auto mx-4">
+            <form className="bg-white md:w-96 w-80 p-6 rounded-lg drop-shadow-xl mt-20 md:mt-auto m-auto mx-4">
                 <h1 className="text-gray-800 font-bold text-2xl mb-4">Create Your Account!</h1>
 
                     <div className="flex items-center border-2 py-2 px-3 rounded-full mb-4">

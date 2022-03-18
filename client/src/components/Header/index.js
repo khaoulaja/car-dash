@@ -13,7 +13,7 @@ return (
     </div>
     <div className="block lg:hidden">
         <button id="nav-toggle" 
-        className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 duration-500 hover:text-gray-400 hover:border-gray-400"
+        className="flex items-center px-3 py-2 border rounded mr-3 text-gray-500 border-gray-600 duration-500 hover:text-gray-400 hover:border-gray-400"
         onClick={()=>{
 			document.getElementById("nav-content").classList.toggle("hidden");
 		}}
