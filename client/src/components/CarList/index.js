@@ -6,7 +6,7 @@ return(
     <div className=" bg-hero p-10 md:p-20">
         <div className="flex flex-col lg:flex-row lg:flex justify-center bg-slate-50 p-10 rounded-lg">
             <div className=" overflow-hidden lg:flex flex-wrap w-full lg:w-1/2 justify-around items-center">
-                <img className="h-auto rounded-md" src={carPic}/>
+                <img className="h-auto max-h-[500px] object-cover rounded-md" src={carPic}/>
             </div>
             <div className="overflow-hidden w-full lg:w-1/2  lg:ml-20 flex flex-col text-slate-900 items-start md:text-left  ">                
                 <h2 className="font-bold text-slate-900 text-2xl md:text-4xl mb-8 mt-8 lg:mt-auto">Car Information</h2>
