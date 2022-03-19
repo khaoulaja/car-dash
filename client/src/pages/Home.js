@@ -9,13 +9,13 @@ const Home =()=>{
                 <p className="text-xl font-medium text-gray-800">That’s a lot to add to your already busy calendar. 
                 <br/>Luckily, there is an easier way to keep track of everything. 
                 <br/>
-                 <span className="font-bold">Car-Dash</span> will let you do just that. <br/>
-                Sign up now and keep your vehicle serviced and in tip-top shape!
+                 <span className="font-bold">Car-Dash</span> will let you do just that and much more. <br/>
+                Sign up now for free and keep your vehicle serviced and in tip-top shape!
                 </p>
-                <button type="submit" 
-                    className="block w-1/2 my-8 py-2 rounded-full text-white font-semibold mb-2 bg-gradient-to-l from-sky-500 to-indigo-600 transition duration-500 hover:shadow-md hover:hue-rotate-30 ">
+                <a href="/signup" 
+                    className="block w-1/2 my-8 py-2 rounded-full text-center font-montserrat text-white font-semibold mb-2 bg-gradient-to-l from-sky-500 to-indigo-600 transition duration-500 hover:shadow-md hover:hue-rotate-30 ">
                         Register now
-                </button>
+                </a>
             </div>
             <div className="shrink-0 overflow-hidden md:flex w-full md:w-1/2 i justify-around items-center">
              <img className="h-auto" src={pic}/>

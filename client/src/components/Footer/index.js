@@ -6,10 +6,10 @@ const Footer = ()=>{
 
 
             <div className="text-center p-4 slate-900 " >
-                © 2022  <a className="hover:text-slate-400" href="/">CarDash</a>  - Made by :{' '} 
-                <a className="hover:text-slate-400" href="https://github.com/khaoulaja/">Khaoula Jabour</a>,{' '} 
+                © 2022  <a className="hover:text-slate-400" href="/">CarDash</a>  |  Keep your vehicle serviced and in tip-top shape!
+                {/*Made by :{' '}  <a className="hover:text-slate-400" href="https://github.com/khaoulaja/">Khaoula Jabour</a>,{' '} 
                 <a className="hover:text-slate-400" href="https://github.com/Rfields03">Robert Field</a> and {' '} 
-                <a className="hover:text-slate-400" href="https://github.com/javarrisb">Javarris Barnett</a>
+                <a className="hover:text-slate-400" href="https://github.com/javarrisb">Javarris Barnett</a> */}
                
             </div>
         </footer>

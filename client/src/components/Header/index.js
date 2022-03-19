@@ -36,8 +36,9 @@ return (
         </ul>
 
     <div className="font-montserrat items-center md:flex self-center">
-        <button className="mr-5 py-2 px-4 text-indigo-400 border border-indigo-400 rounded-full duration-500 hover:text-slate-300 hover:bg-indigo-600 hover:border-indigo-600">Login</button>
-        <button className="py-2 px-4 text-indigo-400 border border-indigo-400 rounded-full duration-500 hover:text-slate-300 hover:bg-indigo-600 hover:border-indigo-600">Signup</button>
+        <a href="/login" 
+        className="mr-5 py-2 px-4 text-center text-indigo-400 border border-indigo-400 rounded-full duration-500 hover:text-slate-300 hover:bg-indigo-600 hover:border-indigo-600">Login</a>
+        <a href="/signup" className="py-2 px-4 text-center text-indigo-400 border border-indigo-400 rounded-full duration-500 hover:text-slate-300 hover:bg-indigo-600 hover:border-indigo-600">Signup</a>
    </div>
     </div>   
 
