@@ -5,7 +5,7 @@ body {
   margin: 0;
   color: #111827;
 }
-button{
+button, a{
   font-family: 'Montserrat', sans-serif;
 }
 .font-montserrat{

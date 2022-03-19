@@ -1,4 +1,5 @@
 import React from "react";
+import CarList from "./components/CarList";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -10,7 +11,7 @@ function App() {
   return (
     <div>
     <Header/>
-    <Home/>
+    <CarList/>
     <Footer/>
     </div>
   );
