@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const carSchema = new Schema({
-    car: [
+    name: [
         {
             type: String,
         },
