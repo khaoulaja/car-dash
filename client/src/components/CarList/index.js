@@ -72,7 +72,7 @@ return(
                         
                     </li>
                 </ul>
-                <div className="my-6  self-end">
+                <div className="my-6 self-end">
                     <a href="/edit-car" 
                     className="flex  py-2 px-6 float-right text-center text-indigo-400 border border-indigo-400 rounded-full duration-700 hover:text-slate-300 hover:bg-indigo-600 hover:border-indigo-600">
                         <svg className="h-5 w-5 mr-2 text-indigo-400 duration-700" width="24"  height="24"  viewBox="0 0 24 24" 
