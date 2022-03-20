@@ -7,7 +7,7 @@ const CarForm =()=>{
             <form className="bg-white w-full md-:w-2/3 xl:w-1/2 p-6 rounded-lg drop-shadow-xl mt-auto mx-auto md:mx-4">
             <h1 className="text-slate-800 font-bold text-2xl mb-10">Enter Your Car Info!</h1>
             <div className="relative border-b-2 my-10  focus-within:border-indigo-600">
-                <input type="text" name="carname" placeholder=" " className="block w-fullappearance-none focus:outline-none bg-transparent" />
+                <input type="text" name="carname" placeholder=" " className="block w-full appearance-none focus:outline-none bg-transparent" />
                 <label htmlFor="carname" className="text-slate-500 absolute  bottom-2 -z-1 duration-700">Car Name <span className="text-rose-600">*</span></label>
             </div>
             <div className="relative border-b-2 my-10  focus-within:border-indigo-600">
@@ -43,7 +43,7 @@ const CarForm =()=>{
             <div className="my-6 self-end">
                 <button className="py-2 px-6 float-left text-center bg-slate-200 text-slate-500 rounded-full duration-700 hover:text-slate-600 hover:bg-slate-300">Cancel</button>
                 <button type="submit" 
-                className="py-2 px-6 float-right text-center text-slate-300 rounded-full duration-700 bg-indigo-600 hover:bg-indigo-700"
+                className="py-2 px-6 float-right text-center text-slate-300 rounded-full duration-700 bg-indigo-500 hover:bg-indigo-600"
                 >submit</button>
             </div>
             </form>
