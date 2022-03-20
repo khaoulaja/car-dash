@@ -13,7 +13,7 @@ const Home =()=>{
                 Sign up now for free and keep your vehicle serviced and in tip-top shape!
                 </p>
                 <a href="/signup" 
-                    className="block w-1/2 my-8 py-2 rounded-full text-center font-montserrat text-white font-semibold mb-2 bg-gradient-to-l from-sky-500 to-indigo-600 transition duration-500 hover:shadow-md hover:hue-rotate-30 ">
+                    className="block w-1/2 my-8 py-2 rounded-full text-center font-montserrat text-white font-semibold mb-2 bg-gradient-to-l from-sky-500 to-indigo-600 transition duration-500 hover:shadow-md hover:hue-rotate-15 ">
                         Register now
                 </a>
             </div>

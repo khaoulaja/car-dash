@@ -89,7 +89,7 @@ const Maintenance = ()=>{
         <div className=" bg-hero p-10 flex justify-center md:p-20">
         {/* <div className="flex-col lg:flex-row lg:flex  p-10 rounded-lg"> */}
             <form id="maintenance-form" className="bg-white w-fit p-10 rounded-lg drop-shadow-xl mt-auto mx-auto">
-                <h1 className="text-slate-800 font-bold text-2xl mb-10 capitalize">Check all maintenance / service due</h1>
+                <h1 className="text-slate-800 font-bold text-2xl mb-10 capitalize">Select all maintenance / service due</h1>
                 <div className="inline-grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 m-auto ">
                         {maintenance.map((type)=>
                     <div className="relative flex w-fit h-[160px] check" key={type.id}>
