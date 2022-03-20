@@ -1,8 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const carSchema = require('./Car');
-
 const userSchema = new Schema(
     {
         username: {
@@ -19,8 +17,14 @@ const userSchema = new Schema(
         password: {
             type: String,
             required: true,
+            minlength: 5
         },
-        cars: [car.Schema],
+        cars: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Car'
+            }
+        ],
     },
     {
         toJSON: {
@@ -46,7 +50,7 @@ userSchema.methods.isCorrectPassword = async function
 };
 
 userSchema.virtual('carCount').get(function () {
-    return this.car.length;
+    return this.friends.length;
 });
 
 const User = model('User', userSchema);
