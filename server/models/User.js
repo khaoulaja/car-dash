@@ -20,12 +20,7 @@ const userSchema = new Schema(
             required: true,
             minlength: 5
         },
-        cars: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Car'
-            }
-        ],
+
     },
     {
         toJSON: {
