@@ -1,4 +1,4 @@
-import{ gql } from '@apollo/client';
+import { gql } from '@apollo/client';
 
 export const LOGIN_USER = gql`
     mutation login($email: String!, $password: String!){
@@ -64,7 +64,7 @@ mutation($carId: ID!, $type: String!){
         _id
         name
         maintenanceCount
-        maintenance      
+        maintenance
     }
   }
 `;

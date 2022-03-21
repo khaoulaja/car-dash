@@ -18,7 +18,7 @@ const httpLink = createHttpLink({
 });
 
 //Ccreate a middleware function that will retrieve the token and combine it with the existing httpLink.
-const authLink = setContext((_, { headers }) => { //underscore _ to serve as a placeholder for the first parameter.
+const authLink = setContext((_, { headers }) => { 
   const token = localStorage.getItem('id_token');
   return {
     headers: {
@@ -40,19 +40,19 @@ function App() {
       <Router>
         <div>
           <Header/>
-          <div>
-          <Switch>
-              <Route exact path="/" component={Home}/>
-              <Route exact path="/login" component={Login}/>
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/addCar" component={CarForm} />
-              <Route exact path="/car/:carId" component={CarList} />
-              <Route exact path="/maintenance/:carId" component={Maintenance} />
-              {/* <Route exact path="/dashboard" component={Dashboard} /> */}
-              
-              <Route component={NoMatch}/>
-            </Switch>
-          </div>
+          <>
+            <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/login" component={Login}/>
+                <Route exact path="/signup" component={Signup} />
+                <Route exact path="/addCar" component={CarForm} />
+                <Route exact path="/car/:carId" component={CarList} />
+                <Route exact path="/maintenance/:carId" component={Maintenance} />
+                {/* <Route exact path="/dashboard" component={Dashboard} /> */}
+                
+                <Route component={NoMatch}/>
+              </Switch>
+          </>
           <Footer/>
         </div>
       </Router>
