@@ -3,6 +3,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 import {setContext} from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
+import Dashboard from "./pages/Dashboard";
 import CarForm from "./components/CarForm";
 import CarList from "./components/CarList";
 import Footer from "./components/Footer";
@@ -48,7 +49,7 @@ function App() {
                 <Route exact path="/add-car" component={CarForm} />
                 <Route exact path="/car/:carId" component={CarList} />
                 <Route exact path="/maintenance/:carId" component={Maintenance} />
-                {/* <Route exact path="/dashboard" component={Dashboard} /> */}
+                <Route exact path="/dashboard" component={Dashboard} />
                 
                 <Route component={NoMatch}/>
               </Switch>

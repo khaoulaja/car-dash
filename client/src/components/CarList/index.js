@@ -1,10 +1,18 @@
 import React from "react";
 import carPic from '../../assets/images/front-wheel.jpg'
 
-const CarList = ()=>{
+const CarList = ({cars})=>{
+    if(!cars.length){
+        return (
+            <h3>No cars yet</h3>
+        )
+    }
 return(
-    <div className=" bg-hero p-10 md:p-20">
-        <div className="flex flex-col lg:flex-row lg:flex justify-center bg-slate-50 p-10 rounded-lg">
+    // <div className=" bg-hero p-10 md:p-20">
+    <>
+        {cars &&
+        cars.map(car =>(
+        <div className="flex flex-col lg:flex-row lg:flex justify-center bg-slate-50 p-10 rounded-lg" key={car._id}>
             <div className=" overflow-hidden lg:flex flex-wrap w-full lg:w-1/2 justify-around items-center">
                 <img className="h-auto max-h-[500px] object-cover rounded-md" src={carPic}/>
             </div>
@@ -20,7 +28,7 @@ return(
                             <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
                             <p className="pl-2 outline-none border-none">Car Name</p>
                         </div>
-                        <div className="capitalize">Little baby</div>
+                        <div className="capitalize">{car.name}</div>
                         
                     </li>
                     <li className="flex items-center justify-between py-3 px-2 border-slate-200 border-b-2 text-slate-500">
@@ -32,7 +40,7 @@ return(
                             <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
                             <p className="pl-2 outline-none border-none">Make</p>
                         </div>
-                        <div className="capitalize">BMW</div>
+                        <div className="capitalize">{car.make}</div>
                         
                     </li>
                     <li className="flex items-center justify-between py-3 px-2 border-slate-200 border-b-2 text-slate-500">
@@ -44,7 +52,7 @@ return(
                             <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
                             <p className="pl-2 outline-none border-none">Model</p>
                         </div>
-                        <div className="capitalize">X1</div>
+                        <div className="capitalize">{car.model}</div>
                         
                     </li>
                     <li className="flex items-center justify-between py-3 px-2 border-slate-200 border-b-2 text-slate-500">
@@ -56,7 +64,7 @@ return(
                             <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
                             <p className="pl-2 outline-none border-none">Year</p>
                         </div>
-                        <div className="capitalize">2015</div>
+                        <div className="capitalize">{car.year}</div>
                         
                     </li>
                     <li className="flex items-center justify-between py-3 px-2 border-slate-200 border-b-2 text-slate-500">
@@ -68,7 +76,7 @@ return(
                             <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
                             <p className="pl-2 outline-none border-none">Color</p>
                         </div>
-                        <div className="capitalize">Gray</div>
+                        <div className="capitalize">{car.color}</div>
                         
                     </li>
                 </ul>
@@ -86,8 +94,9 @@ return(
                 
             </div>
         </div>
-    </div>
-)
+    )) }
+</>
+    )
 }
 
 export default CarList;

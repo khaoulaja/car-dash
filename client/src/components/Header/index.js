@@ -29,7 +29,7 @@ return (
                 <title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
         </button>
     </div>
-    <div className=" flex w-full justify-between flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+    <div className=" flex w-full justify-end flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 " id="nav-content">
          {Auth.loggedIn() ? (
          <>
          <ul className="font-montserrat lg:mx-auto items-center md:flex">

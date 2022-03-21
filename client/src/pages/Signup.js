@@ -48,7 +48,7 @@ const Signup = ()=>{
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                         <input 
-                        className="pl-2 outline-none border-none" 
+                        className="pl-2 outline-none border-none w-full" 
                         type="username" 
                         name="username" 
                         id="username" 
@@ -61,7 +61,7 @@ const Signup = ()=>{
                         <svg className="h-5 w-5 text-gray-400"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  
                         <circle cx="12" cy="12" r="4" />  <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94" /></svg>
                         <input 
-                        className="pl-2 outline-none border-none" 
+                        className="pl-2 outline-none border-none w-full" 
                         type="email" 
                         name="email" 
                         id="email" 
@@ -76,7 +76,7 @@ const Signup = ()=>{
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />  
                         <path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
                         <input 
-                        className="pl-2 outline-none border-none" 
+                        className="pl-2 outline-none border-none w-full" 
                         type="password" 
                         name="password" 
                         id="password" 
