@@ -1,26 +1,42 @@
 const { Schema, model } = require('mongoose');
 
-const carSchema = new Schema({
+const carSchema = new Schema(
+    {
+        name:{
+                type: String,
+                required: true
+            },
+            // saved car id 
+        make: {
+            type: String,
+            required: true
+        },
+        model: {
+            type: String,
+            required: true
+        },
+        year:{
+            type: String,
+            required: true
+        },
+        color: {
+            type: String,
+            required: true
+        },
+        image:{
+            type: String
+        },
+        maintenance: [
+            {
+                type: String
+            }
+        ],
+        username: {
+            type: String,
+            required: true
+          },
 
-    name: {
-        type: String,
     },
-    make: {
-        type: String,
-    },
-    model: {
-        type: String,
-    },
-    year: {
-        type: String,
-    },
-    color: {
-        type: String,
-    },
-    maintenance: [],
-
-
-},
     {
         toJSON: {
             getters: true

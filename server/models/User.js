@@ -3,14 +3,10 @@ const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
     {
-        firstName: {
+        username: {
             type: String,
             required: true,
-            trim: true
-        },
-        lastName: {
-            type: String,
-            required: true,
+            unique: true,
             trim: true
         },
         email: {
@@ -24,6 +20,12 @@ const userSchema = new Schema(
             required: true,
             minlength: 5
         },
+        cars: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Car'
+            }
+        ]
 
     },
     {
@@ -50,7 +52,7 @@ userSchema.methods.isCorrectPassword = async function
 };
 
 userSchema.virtual('carCount').get(function () {
-    return this.friends.length;
+    return this.cars.length;
 });
 
 const User = model('User', userSchema);
