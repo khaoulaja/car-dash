@@ -1,18 +1,9 @@
 const { Schema, model } = require('mongoose');
 
 const carSchema = new Schema({
-    name: [
-        {
-            type: String,
-        },
-    ],
-    color: {
+
+    name: {
         type: String,
-    },
-    // saved car id 
-    carId: {
-        type: String,
-        required: true,
     },
     make: {
         type: String,
@@ -20,11 +11,14 @@ const carSchema = new Schema({
     model: {
         type: String,
     },
-    maintenance: [
-        {
-            type: String
-        }
-    ],
+    year: {
+        type: String,
+    },
+    color: {
+        type: String,
+    },
+    maintenance: [],
+
 
 },
     {
