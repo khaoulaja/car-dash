@@ -42,8 +42,14 @@ mutation($name: String!, $make: String!, $model: String!, $year: String!, $color
 export const DELETE_CAR =gql`
 mutation($carId: ID!){
     deleteCar(carId: $carId) {
-        _id
-        name
+      name
+      make
+      model
+      year 
+      color
+      image
+      maintenanceCount
+      maintenance
     }
   }
 `;

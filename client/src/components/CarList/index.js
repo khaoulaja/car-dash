@@ -1,14 +1,45 @@
+import { useMutation } from "@apollo/client";
 import React from "react";
 import carPic from '../../assets/images/front-wheel.jpg'
+import auth from "../../utils/auth";
+import { DELETE_CAR } from "../../utils/mutations";
+import {QUERY_ME} from "../../utils/queries"
 import MaintenanceList from "../MaintenanceList";
 
 const CarList = ({cars})=>{
+    const [deleteCar] = useMutation(DELETE_CAR)
     if(!cars.length){
         return (
             <h3>No cars yet</h3>
         )
     }
-return(
+
+
+    const handleDeleteCar = async (carId) =>{
+        const token = auth.loggedIn() ? auth.getToken() : null;
+
+        if (!token) {
+            return false
+        }
+
+        try{
+
+            await deleteCar({variables: {carId}},{
+                update(cache, {data: {deleteCar}}){
+                    const {me} =  cache.readQuery({query: QUERY_ME});
+                    cache.writeQuery({
+                        query: QUERY_ME,
+                        data: {me: {...me, cars:[deleteCar]}}
+                    })
+                }
+            })
+            window.location.assign('/dashboard');
+        }catch (e){
+            console.error(e);
+        }
+    }
+
+    return(
     // <div className=" bg-hero p-10 md:p-20">
     <>
         {cars &&
@@ -83,14 +114,14 @@ return(
                         </li>
                     </ul>
                     <div className="my-6 self-end">
-                        <a href="/edit-car" 
-                        className="flex items-center py-2 px-6 ml-4 float-right text-center text-rose-400 border border-rose-400 rounded-full duration-700 hover:text-slate-300 hover:bg-rose-600 hover:border-rose-600">
+                        <a onClick={()=>{handleDeleteCar(car._id)}} 
+                        className="cursor-pointer flex items-center py-2 px-6 ml-4 float-right text-center text-rose-400 border border-rose-400 rounded-full duration-700 hover:text-slate-300 hover:bg-rose-600 hover:border-rose-600">
                             <svg className="h-5 w-5 mr-2 text-rose-400 duration-700"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  
                             <line x1="4" y1="7" x2="20" y2="7" />  <line x1="10" y1="11" x2="10" y2="17" />  <line x1="14" y1="11" x2="14" y2="17" />  
                             <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />  
                             <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
                             Delete Car 
-                            </a>
+                        </a>
                         <a href="/maintenance" 
                         className="flex items-center py-2 px-6 float-right text-center text-slate-300 bg-indigo-500 rounded-full duration-700  hover:bg-indigo-600 ">
                             <svg className="h-5 w-5 mr-2 text-slate-300 duration-700"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />  
