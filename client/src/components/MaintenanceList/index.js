@@ -36,7 +36,7 @@ const MaintenanceList=({maintenanceArry, carId})=>{
                     </svg>
 
                       {type}</div>
-                    <a className="cursor-pointer" onClick={()=> handleRemoveMaintenance(type, carId)} title="delete maintenance"> 
+                    <a className="cursor-pointer" onClick={()=> handleRemoveMaintenance(type, carId)} title="remove from due maintenance"> 
                     <svg className="h-5 w-5 ml-2 text-slate-500 hover:text-amber-600 duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>

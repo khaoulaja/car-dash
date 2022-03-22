@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import gif from '../assets/images/cardriving.gif'
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [addUser, { error }] = useMutation(ADD_USER);
@@ -92,7 +93,7 @@ const Signup = () => {
                     className="block w-full duration-1000 bg-indigo-600 hover:bg-sky-400 my-4 py-2 rounded-full text-white font-semibold mb-2">
                         Sign up</button>
                 <div className="text-gray-600 my-4">Already have an account? {' '}
-                <a href="/login" className="text-indigo-600 underline underline-offset-4 duration-500 hover:text-sky-400">Login</a></div>
+                <Link to="/login" className="text-indigo-600 underline underline-offset-4 duration-500 hover:text-sky-400">Login</Link></div>
             </form>
             
         </div>

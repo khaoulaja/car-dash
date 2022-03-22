@@ -25,8 +25,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_CAR =gql`
-mutation($name: String!, $make: String!, $model: String!, $year: String!, $color: String!){
-    addCar(name: $name, make: $make, model: $model, year: $year, color: $color) {
+mutation($name: String!, $make: String!, $model: String!, $year: String!, $color: String!, $image: String){
+    addCar(name: $name, make: $make, model: $model, year: $year, color: $color, image: $image) {
       _id
       name
       make
