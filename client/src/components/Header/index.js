@@ -36,9 +36,9 @@ return (
             <li className="mx-3 text-slate-300 font-medium">
                 <Link className="growing-underline" to="/dashboard">Dashboard</Link>
             </li>
-            <li className="growing-underline text-slate-300 font-medium mx-3">
+            {/* <li className="growing-underline text-slate-300 font-medium mx-3">
                 <Link className="" to="cars">My Cars</Link>
-            </li>
+            </li> */}
             <li className="growing-underline text-slate-300 font-medium mx-3">
                 <Link to="/add-car">Add Car</Link>
             </li>

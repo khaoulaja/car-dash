@@ -48,7 +48,7 @@ function App() {
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/add-car" component={CarForm} />
                 <Route exact path="/car/:carId" component={CarList} />
-                <Route exact path="/maintenance/:carId" component={Maintenance} />
+                <Route exact path="/maintenance" component={Maintenance} />
                 <Route exact path="/dashboard" component={Dashboard} />
                 
                 <Route component={NoMatch}/>
