@@ -6,14 +6,16 @@ import { QUERY_CARS, QUERY_ME } from '../../utils/queries';
 
 
 const CarForm = () => {
-
-    const [make, setText] = useState('');
+    const [name, make, model, year, color, username, setText] = useState('');
     const handleFormSubmit = async event => {
         event.preventDefault();
 
         try {
             await addCar({
-                variables: { make }
+                variables: {
+                    name, make, model,
+                    year, color, username
+                }
             });
 
             setText('');
@@ -22,7 +24,7 @@ const CarForm = () => {
         }
     };
 
-    const [addCar, { error }] = useMutation(ADD_CAR, {
+    const [addCar] = useMutation(ADD_CAR, {
         update(cache, { data: { addCar } }) {
             try {
                 const { car } = cache.readQuery({ query: QUERY_CARS });
