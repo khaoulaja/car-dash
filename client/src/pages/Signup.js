@@ -1,47 +1,47 @@
 import { useMutation } from "@apollo/client";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import gif from '../assets/images/cardriving.gif'
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
 
-const Signup = ()=>{
-    const [addUser, {error}] = useMutation(ADD_USER);
-    const [formState, setFormState] = useState({ username: '', email: '', password: '' });
-  
-    // update state based on form input changes
-    const handleChange = (event) => {
-      const { name, value } = event.target;
-  
-      setFormState({
-        ...formState,
-        [name]: value,
-      });
-    };
-  
-    // submit form
-    const handleFormSubmit = async (event) => {
-      event.preventDefault();
-      //use try/catch instead of promises to handle errors
-      try{
-        //execute addUser mutation and pass in variable data from form
-        const {data} = await addUser({
-          variables: {...formState}
-        });
-        Auth.login(data.addUser.token);
-      } catch(e){
-        console.error(e );
-      }
-    };
+const Signup = () => {
+  const [addUser, { error }] = useMutation(ADD_USER);
+  const [formState, setFormState] = useState({ username: '', email: '', password: '' });
 
-    return (
-        <div className="min-h-screen md:flex bg-gradient-to-r from-sky-500 to-indigo-500">
-        <div className="overflow-hidden md:flex w-1/2  i justify-around items-center hidden bg-offwhite">
-            <img src={gif}/>
-        </div>
-        <div className="overflow-hidden m-auto flex md:w-1/2 justify-center  py-10 items-center">
-            <form onSubmit={handleFormSubmit} 
-            className="bg-white md:w-96 w-80 p-6 rounded-lg drop-shadow-xl mt-20 md:mt-auto m-auto mx-4">
-                <h1 className="text-gray-800 font-bold text-2xl mb-4">Create Your Account!</h1>
+  // update state based on form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  // submit form
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    //use try/catch instead of promises to handle errors
+    try {
+      //execute addUser mutation and pass in variable data from form
+      const { data } = await addUser({
+        variables: { ...formState }
+      });
+      Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  return (
+    <div className="min-h-screen md:flex bg-gradient-to-r from-sky-500 to-indigo-500">
+      <div className="overflow-hidden md:flex w-1/2  i justify-around items-center hidden bg-offwhite">
+        <img src={gif} />
+      </div>
+      <div className="overflow-hidden m-auto flex md:w-1/2 justify-center  py-10 items-center">
+        <form onSubmit={handleFormSubmit}
+          className="bg-white md:w-96 w-80 p-6 rounded-lg drop-shadow-xl mt-20 md:mt-auto m-auto mx-4">
+          <h1 className="text-gray-800 font-bold text-2xl mb-4">Create Your Account!</h1>
 
                     <div className="flex items-center border-2 py-2 px-3 rounded-full mb-4">
                         <svg className="h-5 w-5 text-gray-400"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,9 +98,10 @@ const Signup = ()=>{
         </div>
     </div>
 
-    
 
-)
+
+
+  )
 }
 
 export default Signup;

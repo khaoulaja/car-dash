@@ -2,11 +2,11 @@ const { Schema, model } = require('mongoose');
 
 const carSchema = new Schema(
     {
-        name:{
-                type: String,
-                required: true
-            },
-            // saved car id 
+        name: {
+            type: String,
+            required: true
+        },
+
         make: {
             type: String,
             required: true
@@ -15,7 +15,7 @@ const carSchema = new Schema(
             type: String,
             required: true
         },
-        year:{
+        year: {
             type: String,
             required: true
         },
@@ -23,7 +23,7 @@ const carSchema = new Schema(
             type: String,
             required: true
         },
-        image:{
+        image: {
             type: String
         },
         maintenance: [
@@ -34,7 +34,7 @@ const carSchema = new Schema(
         username: {
             type: String,
             required: true
-          },
+        },
 
     },
     {
