@@ -1,5 +1,6 @@
 import React from "react";
 import carPic from '../../assets/images/front-wheel.jpg'
+import MaintenanceList from "../MaintenanceList";
 
 const CarList = ({cars})=>{
     if(!cars.length){
@@ -12,7 +13,7 @@ return(
     <>
         {cars &&
         cars.map(car =>(
-         <div className="bg-slate-50 p-4 rounded-lg mb-6">
+         <div className="bg-slate-50 p-4 rounded-lg mb-6" key={car._id}>
             <div className="flex flex-col lg:flex-row lg:flex justify-center bg-slate-50 p-10" key={car._id}>
                 <div className=" overflow-hidden lg:flex flex-wrap w-full lg:w-1/2 justify-around items-center">
                     <img className="h-auto max-h-[500px] object-cover rounded-md" src={carPic}/>
@@ -102,7 +103,8 @@ return(
                 </div>
             </div>
             <div className="flex flex-col w-full  pl-10 pb-6">
-    
+            <h2 className="font-bold text-slate-600 text-2xl md:text-3xl mb-6 mt-8 lg:mt-auto">Maintenance Due: {car.maintenanceCount}</h2>
+                <MaintenanceList maintenanceArry={car.maintenance} carId={car._id} />
             </div>
         </div>
     )) }
