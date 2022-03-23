@@ -12,7 +12,7 @@ const Home =()=>{
                 <p className="text-xl font-medium text-gray-800">That’s a lot to add to your already busy calendar. 
                 <br/>Luckily, there is an easier way to keep track of everything. 
                 <br/>
-                 <span className="font-bold">Car-Dash</span> will let you do just that and much more. <br/>
+                 <span className="font-bold">CarDash</span> will let you do just that and much more. <br/>
                 Sign up now for free and keep your vehicle serviced and in tip-top shape!
                 </p>
                 
