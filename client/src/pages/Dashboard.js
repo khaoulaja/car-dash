@@ -1,9 +1,9 @@
-import { useMutation, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import React from "react";
-import {QUERY_CARS, QUERY_ME} from '../utils/queries';
+import { QUERY_ME} from '../utils/queries';
 import CarList from "../components/CarList";
-import Auth from '../utils/auth'
-import { REMOVE_MAINTENANCE } from "../utils/mutations";
+import Auth from '../utils/auth';
+import Login from "./Login";
 
 
 const Dashboard =()=>{
@@ -14,17 +14,16 @@ const Dashboard =()=>{
     
 
     const loggedIn = Auth.loggedIn();
-    // console.log(me.cars);
-    //  if(loading){
-    //      return ( <h2>Loading</h2>)
-    //  }
-
 
     return(
-        <div className=" bg-hero p-10 md:p-20 min-h-screen">
-            {loggedIn && loading ? <div>loading</div> :
-        <CarList cars={me.cars}/> }
-        </div>
+        <>
+            {loggedIn ?
+            <div className=" bg-hero p-10 md:p-20 min-h-screen">
+                { loading ? <div>loading</div> :
+            <CarList cars={me.cars}/> }
+            </div> : <Login/>
+            }
+        </>
     )
 
 }

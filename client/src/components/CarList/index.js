@@ -5,12 +5,18 @@ import auth from "../../utils/auth";
 import { DELETE_CAR } from "../../utils/mutations";
 import {QUERY_ME} from "../../utils/queries"
 import MaintenanceList from "../MaintenanceList";
+import {Link} from 'react-router-dom'
 
 const CarList = ({cars})=>{
     const [deleteCar] = useMutation(DELETE_CAR)
     if(!cars.length){
         return (
-            <h3>No cars yet</h3>
+            <>
+            <h3 className="text-slate-600 text-2xl font-semibold">No cars yet
+            </h3>
+            <br/>
+            <Link to='/add-car' className="text-slate-100 rounded-full bg-indigo-500 ml-10 px-6 py-2 duration-500 hover:bg-indigo-600">Add Car</Link>
+            </>
         )
     }
 
@@ -63,7 +69,7 @@ const CarList = ({cars})=>{
                                 <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
                                 <p className="pl-2 outline-none border-none">Car Name</p>
                             </div>
-                            <div className="capitalize">{car.name}</div>
+                            <div className="capitalize font-medium">{car.name}</div>
                             
                         </li>
                         <li className="flex items-center justify-between py-3 px-2 border-slate-200 border-b-2 text-slate-500">
@@ -75,7 +81,7 @@ const CarList = ({cars})=>{
                                 <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
                                 <p className="pl-2 outline-none border-none">Make</p>
                             </div>
-                            <div className="capitalize">{car.make}</div>
+                            <div className="capitalize font-medium">{car.make}</div>
                             
                         </li>
                         <li className="flex items-center justify-between py-3 px-2 border-slate-200 border-b-2 text-slate-500">
@@ -87,7 +93,7 @@ const CarList = ({cars})=>{
                                 <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
                                 <p className="pl-2 outline-none border-none">Model</p>
                             </div>
-                            <div className="capitalize">{car.model}</div>
+                            <div className="capitalize font-medium">{car.model}</div>
                             
                         </li>
                         <li className="flex items-center justify-between py-3 px-2 border-slate-200 border-b-2 text-slate-500">
@@ -99,7 +105,7 @@ const CarList = ({cars})=>{
                                 <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
                                 <p className="pl-2 outline-none border-none">Year</p>
                             </div>
-                            <div className="capitalize">{car.year}</div>
+                            <div className="capitalize font-medium">{car.year}</div>
                             
                         </li>
                         <li className="flex items-center justify-between py-3 px-2 border-slate-200 border-b-2 text-slate-500">
@@ -111,26 +117,26 @@ const CarList = ({cars})=>{
                                 <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
                                 <p className="pl-2 outline-none border-none">Color</p>
                             </div>
-                            <div className="capitalize">{car.color}</div>
+                            <div className="capitalize font-medium">{car.color}</div>
                             
                         </li>
                     </ul>
                     <div className="my-6 self-end">
-                        <a onClick={()=>{handleDeleteCar(car._id)}} 
+                        <button onClick={()=>{handleDeleteCar(car._id)}} 
                         className="cursor-pointer flex items-center py-2 px-6 ml-4 float-right text-center text-rose-400 border border-rose-400 rounded-full duration-700 hover:text-slate-300 hover:bg-rose-600 hover:border-rose-600">
                             <svg className="h-5 w-5 mr-2 text-rose-400 duration-700"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  
                             <line x1="4" y1="7" x2="20" y2="7" />  <line x1="10" y1="11" x2="10" y2="17" />  <line x1="14" y1="11" x2="14" y2="17" />  
                             <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />  
                             <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
                             Delete Car 
-                        </a>
-                        <a href="/maintenance" 
+                        </button>
+                        <Link to={`/maintenance/${car._id}`}
                         className="flex items-center py-2 px-6 float-right text-center text-slate-300 bg-indigo-500 rounded-full duration-700  hover:bg-indigo-600 ">
                             <svg className="h-5 w-5 mr-2 text-slate-300 duration-700"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />  
                             <line x1="12" y1="8" x2="12" y2="16" />  
                             <line x1="8" y1="12" x2="16" y2="12" /></svg>
                             Add Maintenance 
-                            </a>
+                            </Link>
                     </div>
                   
                 </div>

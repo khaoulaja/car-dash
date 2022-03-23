@@ -27,8 +27,8 @@ const MaintenanceList=({maintenanceArry, carId})=>{
     return (
         <div>
             <ul className="flex flex-wrap">
-            {maintenanceArry && maintenanceArry.map(type => (
-                <li className="border-2 border-amber-500 m-1.5 rounded-lg w-80 mr-8 " key={type}>
+            {maintenanceArry && maintenanceArry.map((type, index) => (
+                <li className={"border-2 border-amber-500 m-1.5 rounded-lg w-80 mr-8"} key={index}>
                 <div className="flex justify-between p-2 text-center text-amber-500 font-montserrat font-semibold capitalize ">
                 <div className="flex items-center">
                 <svg className="h-5 w-5 mr-2 text-amber-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
