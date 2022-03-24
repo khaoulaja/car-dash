@@ -123,7 +123,7 @@ const CarList = ({cars})=>{
                     </ul>
                     <div className="my-6 self-end">
                         <button onClick={()=>{handleDeleteCar(car._id)}} 
-                        className="cursor-pointer flex items-center py-2 px-6 ml-4 float-right text-center text-rose-400 border border-rose-400 rounded-full duration-700 hover:text-slate-300 hover:bg-rose-600 hover:border-rose-600">
+                        className="cursor-pointer flex items-center py-2 px-6 ml-4 mb-4 float-right text-center text-rose-400 border border-rose-400 rounded-full duration-700 hover:text-slate-300 hover:bg-rose-600 hover:border-rose-600">
                             <svg className="h-5 w-5 mr-2 text-rose-400 duration-700"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  
                             <line x1="4" y1="7" x2="20" y2="7" />  <line x1="10" y1="11" x2="10" y2="17" />  <line x1="14" y1="11" x2="14" y2="17" />  
                             <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />  
