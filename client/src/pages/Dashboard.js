@@ -18,7 +18,7 @@ const Dashboard =()=>{
     return(
         <>
             {loggedIn ?
-            <div className=" bg-hero p-10 md:p-20 min-h-screen">
+            <div className=" bg-hero p-6 md:p-20 min-h-screen">
                 { loading ? <div>loading</div> :
             <CarList cars={me.cars}/> }
             </div> : <Login/>

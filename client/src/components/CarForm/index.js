@@ -65,9 +65,9 @@ const CarForm = () => {
 
 
     return (
-        <div className=" bg-hero p-10 md:p-20">
-            <div className="flex flex-col lg:flex-row lg:flex justify-center p-10 rounded-lg">
-                <form className="bg-white w-full  md:w-2/3 p-10 rounded-lg drop-shadow-xl mt-auto mx-auto md:mx-4" 
+        <div className=" bg-hero p-6 lg:p-20">
+            <div className="flex flex-col md:flex-row lg:flex justify-center lg:p-10 rounded-lg">
+                <form className="bg-white w-full  md:w-4/5 lg:w-2/3 p-10 rounded-lg drop-shadow-xl mt-auto mx-auto md:mx-4" 
                 onSubmit={handleFormSubmit}>
                     <h1 className="text-slate-800 font-bold text-2xl mb-10">Enter Your Car Info!</h1>
                     <div className="relative border-b-2 my-10  focus-within:border-indigo-600">
@@ -131,7 +131,7 @@ const CarForm = () => {
                         <div className="flex flex-wrap">
                             
                             {cars.map(car =>
-                            <div className="w-44" key={car.name}>
+                            <div className="w-36 md:40 lg:w-44" key={car.name}>
                                 <input className="hidden" id={car.name} type="radio" name="image"
                                 value={car.name}
                                 onChange={handleChange}
