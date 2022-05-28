@@ -1,6 +1,7 @@
 import React from "react";
 import pic from '../assets/images/maintenance-guy3.png'
 import { Link } from "react-router-dom";
+import auth from "../utils/auth";
 
 const Home =()=>{
     return (
@@ -14,6 +15,7 @@ const Home =()=>{
                  <span className="font-bold">Car-Dash</span> will let you do just that and much more. <br/>
                 Sign up now for free and keep your vehicle serviced and in tip-top shape!
                 </p>
+                
                 <Link to="/signup" 
                     className="block w-1/2 my-8 py-2 rounded-full text-center font-montserrat text-white font-semibold mb-2 bg-gradient-to-l from-sky-500 to-indigo-600 transition duration-500 hover:shadow-md hover:hue-rotate-15 ">
                         Register now

@@ -1,5 +1,7 @@
 import React from "react";
 import img404 from '../assets/images/404.png'
+import { Link } from "react-router-dom";
+import auth from "../utils/auth";
 
 const NoMatch = ()=>{
     return (
@@ -13,7 +15,7 @@ const NoMatch = ()=>{
                         Oops!  The page you're looking for doesn't exist
                     </div>
                     <div className="my-4">
-                        <a href="/" className="py-2 px-6 float-right text-center text-slate-300 rounded-full duration-700 bg-indigo-500 hover:bg-indigo-600">Back To Home</a>
+                        <Link to={auth.loggedIn ? '/dashboard' : '/'} className="py-2 px-6 float-right text-center text-slate-300 rounded-full duration-700 bg-indigo-500 hover:bg-indigo-600">Back To Home</Link>
                     </div>
                 </div>
 

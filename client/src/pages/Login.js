@@ -4,6 +4,7 @@ import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import gif from '../assets/images/cardriving.gif'
 import { Link } from 'react-router-dom';
+import Dashboard from './Dashboard';
 
 
 const Login = ()=>{
@@ -37,7 +38,11 @@ const Login = ()=>{
         password: '',
       });
     };
+    // if(Auth.loggedIn){
+    //   window.location.assign('/dashboard');
+    // }
     return (
+      
         <div className="min-h-screen md:flex bg-gradient-to-r from-sky-500 to-indigo-500">
         <div className="overflow-hidden md:flex w-1/2  i justify-around items-center hidden bg-offwhite">
             <img src={gif}/>

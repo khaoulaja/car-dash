@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 import { useMutation } from '@apollo/client';
 import { ADD_CAR } from '../../utils/mutations';
-import { QUERY_CARS, QUERY_ME } from '../../utils/queries';
-
+import { Link } from "react-router-dom";
 
 const CarForm = () => {
 
@@ -145,112 +144,12 @@ const CarForm = () => {
                                 </label>
                             </div>
                             ) }
-                            {/* <div className="w-44">
-                                <input className="hidden" id='car1' type="radio" name="image" checked
-                                value='car1'
-                                onChange={handleChange}
-                                />
-                                <label className="flex flex-col border-[3px] rounded-lg border-gray-400 cursor-pointer" htmlFor='car1'>
-                                    <span className="text-xs font-semibold uppercase">
-                                        <img className="rounded-md" src={require(`../../assets/images/cars/car1.png`)}/>
-                                    </span>
-                                    
-                                </label>
-                            </div>
-                            <div className="w-44">
-                                <input className="hidden" id='car2' type="radio" name="image"
-                                value={formState.image}
-                                onChange={handleChange}
-                                />
-                                <label className="flex flex-col border-[3px] rounded-lg border-gray-400 cursor-pointer" htmlFor='car2'>
-                                    <span className="text-xs font-semibold uppercase">
-                                        <img className="rounded-md" src={require(`../../assets/images/cars/car2.png`)}/>
-                                    </span>
-                                    
-                                </label>
-                            </div>
-                            <div className="w-44">
-                                <input className="hidden" id='car3' type="radio" name="image"
-                                value={formState.image}
-                                onChange={handleChange}
-                                />
-                                <label className="flex flex-col border-[3px] rounded-lg border-gray-400 cursor-pointer" htmlFor='car3'>
-                                    <span className="text-xs font-semibold uppercase">
-                                        <img className="rounded-md" src={require(`../../assets/images/cars/car3.png`)}/>
-                                    </span>
-                                    
-                                </label>
-                            </div>
-                            <div className="w-44">
-                                <input className="hidden" id='car4' type="radio" name="image"
-                                value={formState.image}
-                                onChange={handleChange}
-                                />
-                                <label className="flex flex-col border-[3px] rounded-lg border-gray-400 cursor-pointer" htmlFor='car4'>
-                                    <span className="text-xs font-semibold uppercase">
-                                        <img className="rounded-md" src={require(`../../assets/images/cars/car4.png`)}/>
-                                    </span>
-                                    
-                                </label>
-                            </div>
-                            <div className="w-44">
-                                <input className="hidden" id='car5' type="radio" name="image"
-                                value={formState.image}
-                                onChange={handleChange}
-                                />
-                                <label className="flex flex-col border-[3px] rounded-lg border-gray-400 cursor-pointer" htmlFor='car5'>
-                                    <span className="text-xs font-semibold uppercase">
-                                        <img className="rounded-md" src={require(`../../assets/images/cars/car5.png`)}/>
-                                    </span>
-                                    
-                                </label>
-                            </div>
-                            <div className="w-44">
-                                <input className="hidden" id='car6' type="radio" name="image"
-                                value={formState.image}
-                                onChange={handleChange}
-                                />
-                                <label className="flex flex-col border-[3px] rounded-lg border-gray-400 cursor-pointer" htmlFor='car6'>
-                                    <span className="text-xs font-semibold uppercase">
-                                        <img className="rounded-md" src={require(`../../assets/images/cars/car6.png`)}/>
-                                    </span>
-                                    
-                                </label>
-                            </div>
-                            <div className="w-44">
-                                <input className="hidden" id='car7' type="radio" name="image"
-                                value={formState.image}
-                                onChange={handleChange}
-                                />
-                                <label className="flex flex-col border-[3px] rounded-lg border-gray-400 cursor-pointer" htmlFor='car7'>
-                                    <span className="text-xs font-semibold uppercase">
-                                        <img className="rounded-md" src={require(`../../assets/images/cars/car7.png`)}/>
-                                    </span>
-                                    
-                                </label>
-                            </div>
-                            <div className="w-44">
-                                <input className="hidden" id='car8' type="radio" name="image"
-                                value={formState.image}
-                                onChange={handleChange}
-                                />
-                                <label className="flex flex-col border-[3px] rounded-lg border-gray-400 cursor-pointer" htmlFor='car8'>
-                                    <span className="text-xs font-semibold uppercase">
-                                        <img className="rounded-md" src={require(`../../assets/images/cars/car8.png`)}/>
-                                    </span>
-                                    
-                                </label>
-                            </div> */}
                         </div>
 
                     </div>
                     <div className="my-6 self-end">
-                        <button className="py-2 px-6 float-left text-center bg-slate-200 text-slate-500 rounded-full duration-700 hover:text-slate-600 hover:bg-slate-300"
-                        onClick={()=>{
-                            window.location.assign('/dashboard');
-                        }}
-                        >
-                            Cancel</button>
+                        <Link to='/dashboard' className="py-2 px-6 float-left text-center bg-slate-200 text-slate-500 rounded-full duration-700 hover:text-slate-600 hover:bg-slate-300">
+                            Cancel</Link>
                         <button type="submit"
                             className="py-2 px-6 float-right text-center text-slate-300 rounded-full duration-700 bg-indigo-500 hover:bg-indigo-600"
                         >submit</button>
